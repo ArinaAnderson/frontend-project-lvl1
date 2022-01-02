@@ -1,13 +1,18 @@
 name: Eslint
 
-on: push
+on:
+  - push
+  - pull_request
 
 jobs:
-  eslint:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
 
+      - name: npm ci
+        run: |
+          make install
       - name: Run airbnb eslint
         run: 
           make lint
