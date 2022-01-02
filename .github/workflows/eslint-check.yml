@@ -9,4 +9,5 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Run airbnb eslint
-        run: make lint
+        run: 
+          make lint
