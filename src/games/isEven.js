@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-import greet from '../src/greet.js';
+import greet from '../greet.js';
 
 const QUESTION_TITLE = 'Answer "yes" if the number is even, otherwise answer "no".';
 const correctAnswersNum = 3;
