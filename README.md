@@ -6,5 +6,5 @@
 
 ![example workflow](https://github.com/ArinaAnderson/frontend-project-lvl1/actions/workflows/build-project.yml/badge.svg)
 
+[brain-even script](https://asciinema.org/a/dcqF2BuH1VxrtryT77eF6RvSX)
 [![asciicast](https://asciinema.org/a/dcqF2BuH1VxrtryT77eF6RvSX.png)](https://asciinema.org/a/dcqF2BuH1VxrtryT77eF6RvSX)
-https://asciinema.org/a/dcqF2BuH1VxrtryT77eF6RvSX
