@@ -5,3 +5,6 @@
 
 
 ![example workflow](https://github.com/ArinaAnderson/frontend-project-lvl1/actions/workflows/build-project.yml/badge.svg)
+
+[![asciicast](https://asciinema.org/a/dcqF2BuH1VxrtryT77eF6RvSX.png)](https://asciinema.org/a/dcqF2BuH1VxrtryT77eF6RvSX)
+https://asciinema.org/a/dcqF2BuH1VxrtryT77eF6RvSX
