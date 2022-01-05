@@ -18,16 +18,20 @@ const inputParams = {
     },
   },
   operators: ['add', 'subst', 'multiply'],
+};
+
+const input = {
   operands: [],
   operator: null,
 };
 
-const { operatorFuncs, operators, operands } = inputParams;
+const { operatorFuncs, operators } = inputParams;
+const { operands } = input;
 
 function getOption() {
   const maxVal = operators.length - 1;
   const minVal = 0;
-  inputParams.operator = shuffleArray(inputParams.operators)[getRandomNumber(minVal, maxVal)];
+  input.operator = shuffleArray(operators)[getRandomNumber(minVal, maxVal)];
   operands[0] = getRandomNumber(numberMinVal, numberMaxVal);
   operands[1] = getRandomNumber(numberMinVal, numberMaxVal);
 
@@ -36,11 +40,11 @@ function getOption() {
     subst: '-',
     multiply: '*',
   };
-  const operatorSymb = operatorToSymbs[inputParams.operator];
+  const operatorSymb = operatorToSymbs[input.operator];
   return `${operands[0]} ${operatorSymb} ${operands[1]}`;
 }
 
-const getCorrectResult = () => operatorFuncs[inputParams.operator](operands[0], operands[1]);
+const getCorrectResult = () => operatorFuncs[input.operator](operands[0], operands[1]);
 
 const calc = () => {
   setGame(QUESTION_TITLE, getOption, getCorrectResult);
