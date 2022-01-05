@@ -8,3 +8,6 @@
 
 [brain-even script](https://asciinema.org/a/dcqF2BuH1VxrtryT77eF6RvSX)
 [![asciicast](https://asciinema.org/a/dcqF2BuH1VxrtryT77eF6RvSX.png)](https://asciinema.org/a/dcqF2BuH1VxrtryT77eF6RvSX)
+
+[brain-calc script](https://asciinema.org/a/b99vc1jy2fGiXgSnLmnZVS4IV)
+[![asciicast](https://asciinema.org/a/b99vc1jy2fGiXgSnLmnZVS4IV.png)](https://asciinema.org/a/b99vc1jy2fGiXgSnLmnZVS4IV)
