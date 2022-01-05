@@ -43,7 +43,6 @@ function getOption() {
 const getCorrectResult = () => operatorFuncs[inputParams.operator](operands[0], operands[1]);
 
 const calc = () => {
-  console.log('Kukuuuu');
   setGame(QUESTION_TITLE, getOption, getCorrectResult);
 };
 
