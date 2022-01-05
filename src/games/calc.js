@@ -3,6 +3,8 @@ import setGame from '../index.js';
 import { getRandomNumber, shuffleArray } from '../utils.js';
 
 const QUESTION_TITLE = 'What is the result of the expression?';
+const numberMaxVal = 100;
+const numberMinVal = 0;
 const inputParams = {
   operatorFuncs: {
     add(arg1, arg2) {
@@ -20,13 +22,14 @@ const inputParams = {
   operator: null,
 };
 
-const getOption = () => {
-  // const {  }
-  const maxVal = inputParams.operators.length - 1;
+const { operatorFuncs, operators, operands } = inputParams;
+
+function getOption() {
+  const maxVal = operators.length - 1;
   const minVal = 0;
   inputParams.operator = shuffleArray(inputParams.operators)[getRandomNumber(minVal, maxVal)];
-  inputParams.operands[0] = getRandomNumber(0, 100);
-  inputParams.operands[1] = getRandomNumber(0, 100);
+  operands[0] = getRandomNumber(numberMinVal, numberMaxVal);
+  operands[1] = getRandomNumber(numberMinVal, numberMaxVal);
 
   const operatorToSymbs = {
     add: '+',
@@ -34,17 +37,10 @@ const getOption = () => {
     multiply: '*',
   };
   const operatorSymb = operatorToSymbs[inputParams.operator];
-  return `${inputParams.operands[0]} ${operatorSymb} ${inputParams.operands[1]}`;
-};
+  return `${operands[0]} ${operatorSymb} ${operands[1]}`;
+}
 
-const getCorrectResult = () => inputParams.operatorFuncs[inputParams.operator](inputParams.operands[0],inputParams.operands[1]);
-
-/*
-const getRandomNumber = () => {
-  const operators = ['-', '+', '*'];
-  Math.floor(Math.random() * 101)
-};
-*/
+const getCorrectResult = () => operatorFuncs[inputParams.operator](operands[0], operands[1]);
 
 const calc = () => {
   console.log('Kukuuuu');
