@@ -7,7 +7,7 @@ let correctAnswersCount = 0;
 
 const getOption = (getOptionCallback) => getOptionCallback();
 const getCorrectResult = (getCorrectResCallback, input) => getCorrectResCallback(input);
-const checkRespond = (correctVal, respond) => correctVal == respond;
+const checkRespond = (correctVal, respond) => correctVal === respond;
 const formQuestion = (option) => `Question ${option}`;
 const formFeedback = (correctVal, respond, gamer) => {
   const isCorrect = checkRespond(correctVal, respond);
@@ -19,7 +19,7 @@ const formFeedback = (correctVal, respond, gamer) => {
 
 const getRespond = () => {
   const respond = readlineSync.question('Your answer: ');
-  return respond;
+  return Number.isNaN(parseInt(respond, 10)) ? respond : parseInt(respond, 10);
 };
 
 const setGame = (title, getOptionCallback, getCorrectResCallback) => {
