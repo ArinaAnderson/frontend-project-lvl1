@@ -11,3 +11,6 @@
 
 [brain-calc script](https://asciinema.org/a/b99vc1jy2fGiXgSnLmnZVS4IV)
 [![asciicast](https://asciinema.org/a/b99vc1jy2fGiXgSnLmnZVS4IV.png)](https://asciinema.org/a/b99vc1jy2fGiXgSnLmnZVS4IV)
+
+[brain-gcd script](https://asciinema.org/a/d4CWDcU6lu7vH5xuEOESoVkWF)
+[![asciicast](https://asciinema.org/a/d4CWDcU6lu7vH5xuEOESoVkWF.png)](https://asciinema.org/a/d4CWDcU6lu7vH5xuEOESoVkWF)
