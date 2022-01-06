@@ -28,7 +28,7 @@ const input = {
 const { operatorFuncs, operators } = inputParams;
 const { operands } = input;
 
-function getOption() {
+const getOption = () => {
   const maxVal = operators.length - 1;
   const minVal = 0;
   input.operator = shuffleArray(operators)[getRandomNumber(minVal, maxVal)];
@@ -42,7 +42,7 @@ function getOption() {
   };
   const operatorSymb = operatorToSymbs[input.operator];
   return `${operands[0]} ${operatorSymb} ${operands[1]}`;
-}
+};
 
 const getCorrectResult = () => operatorFuncs[input.operator](operands[0], operands[1]);
 
