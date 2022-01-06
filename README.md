@@ -14,3 +14,6 @@
 
 [brain-gcd script](https://asciinema.org/a/d4CWDcU6lu7vH5xuEOESoVkWF)
 [![asciicast](https://asciinema.org/a/d4CWDcU6lu7vH5xuEOESoVkWF.png)](https://asciinema.org/a/d4CWDcU6lu7vH5xuEOESoVkWF)
+
+[brain-progression script](https://asciinema.org/a/eVemZu2yKsPbSZpqNN4wmhvWr)
+[![asciicast](https://asciinema.org/a/eVemZu2yKsPbSZpqNN4wmhvWr.png)](https://asciinema.org/a/eVemZu2yKsPbSZpqNN4wmhvWr)
