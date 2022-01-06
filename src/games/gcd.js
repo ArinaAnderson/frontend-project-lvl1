@@ -7,11 +7,11 @@ const numberMaxVal = 100;
 const numberMinVal = 1;
 const input = [];
 
-function getOption() {
+const getOption = () => {
   input[0] = getRandomNumber(numberMinVal, numberMaxVal);
   input[1] = getRandomNumber(numberMinVal, numberMaxVal);
   return `${input[0]} ${input[1]}`;
-}
+};
 
 const getCorrectResult = () => {
   const x = input[0];
