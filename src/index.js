@@ -8,7 +8,7 @@ let correctAnswersCount = 0;
 const getOption = (getOptionCallback) => getOptionCallback();
 const getCorrectResult = (getCorrectResCallback, input) => getCorrectResCallback(input);
 const checkRespond = (correctVal, respond) => correctVal === respond;
-const formQuestion = (option) => `Question ${option}`;
+const formQuestion = (option) => `Question: ${option}`;
 const formFeedback = (correctVal, respond, gamer) => {
   const isCorrect = checkRespond(correctVal, respond);
   if (isCorrect) {
