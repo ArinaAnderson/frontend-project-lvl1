@@ -17,3 +17,6 @@
 
 [brain-progression script](https://asciinema.org/a/eVemZu2yKsPbSZpqNN4wmhvWr)
 [![asciicast](https://asciinema.org/a/eVemZu2yKsPbSZpqNN4wmhvWr.png)](https://asciinema.org/a/eVemZu2yKsPbSZpqNN4wmhvWr)
+
+[brain-prime script](https://asciinema.org/a/ZhZJbGsSG34sn4T8Nu9LuFFBF)
+[![asciicast](https://asciinema.org/a/ZhZJbGsSG34sn4T8Nu9LuFFBF.png)](https://asciinema.org/a/ZhZJbGsSG34sn4T8Nu9LuFFBF)
