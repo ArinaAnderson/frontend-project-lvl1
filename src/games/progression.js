@@ -6,7 +6,7 @@ const QUESTION_TITLE = 'What number is missing in the progression?';
 const sequenceLength = 10;
 let correctRespond = null;
 
-function getOption() {
+const getOption = () => {
   const dif = getRandomNumber(1, 9);
   const firstMember = getRandomNumber(1, 20);
   const hiddenMemeberIdx = getRandomNumber(1, sequenceLength - 1);
@@ -27,7 +27,7 @@ function getOption() {
     return buildSequence(nextIdx, newElem, newCount);
   };
   return buildSequence(0, firstMember, 0);
-}
+};
 
 const getCorrectResult = () => correctRespond;
 
