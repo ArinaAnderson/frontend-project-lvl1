@@ -31,7 +31,7 @@ const { operands } = input;
 const getOption = () => {
   const maxVal = operators.length - 1;
   const minVal = 0;
-  input.operator = shuffleArray(operators)[getRandomNumber(minVal, maxVal)];
+  input.operator = operators[getRandomNumber(minVal, maxVal)];
   operands[0] = getRandomNumber(numberMinVal, numberMaxVal);
   operands[1] = getRandomNumber(numberMinVal, numberMaxVal);
 
