@@ -1,6 +1,6 @@
 import setGame from '../index.js';
 
-import { getRandomNumber, shuffleArray } from '../utils.js';
+import { getRandomNumber } from '../utils.js';
 
 const QUESTION_TITLE = 'What is the result of the expression?';
 const numberMaxVal = 100;
