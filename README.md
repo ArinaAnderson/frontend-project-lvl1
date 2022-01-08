@@ -29,7 +29,7 @@ Run **brain-even** command in your CMD Line:
 brain-even
 ```
 
-[brain-even script](https://asciinema.org/a/dcqF2BuH1VxrtryT77eF6RvSX)
+[brain-even demonstration](https://asciinema.org/a/dcqF2BuH1VxrtryT77eF6RvSX)
 [![asciicast](https://asciinema.org/a/dcqF2BuH1VxrtryT77eF6RvSX.png)](https://asciinema.org/a/dcqF2BuH1VxrtryT77eF6RvSX)
 
 The game asks if a random number is even or not.
@@ -42,7 +42,7 @@ Run **brain-calc** command in your CMD Line:
 brain-calc
 ```
 
-[brain-calc script](https://asciinema.org/a/b99vc1jy2fGiXgSnLmnZVS4IV)
+[brain-calc demonstration](https://asciinema.org/a/b99vc1jy2fGiXgSnLmnZVS4IV)
 [![asciicast](https://asciinema.org/a/b99vc1jy2fGiXgSnLmnZVS4IV.png)](https://asciinema.org/a/b99vc1jy2fGiXgSnLmnZVS4IV)
 
 The game asks to calculate the result of a random arithmetic expression.
@@ -55,7 +55,7 @@ Run **brain-gcd** command in your CMD Line:
 brain-gcd
 ```
 
-[brain-gcd script](https://asciinema.org/a/d4CWDcU6lu7vH5xuEOESoVkWF)
+[brain-gcd demonstration](https://asciinema.org/a/d4CWDcU6lu7vH5xuEOESoVkWF)
 [![asciicast](https://asciinema.org/a/d4CWDcU6lu7vH5xuEOESoVkWF.png)](https://asciinema.org/a/d4CWDcU6lu7vH5xuEOESoVkWF)
 
 The game asks for the greatest common divisor of two random numbers
@@ -68,7 +68,7 @@ Run **brain-progression** command in your CMD Line:
 brain-progression
 ```
 
-[brain-progression script](https://asciinema.org/a/eVemZu2yKsPbSZpqNN4wmhvWr)
+[brain-progression demonstration](https://asciinema.org/a/eVemZu2yKsPbSZpqNN4wmhvWr)
 [![asciicast](https://asciinema.org/a/eVemZu2yKsPbSZpqNN4wmhvWr.png)](https://asciinema.org/a/eVemZu2yKsPbSZpqNN4wmhvWr)
 
 The game asks to name the hidden element of a given arithmetic progression
@@ -81,7 +81,7 @@ Run **brain-prime** command in your CMD Line:
 brain-prime
 ```
 
-[brain-prime script](https://asciinema.org/a/ZhZJbGsSG34sn4T8Nu9LuFFBF)
+[brain-prime demonstration](https://asciinema.org/a/ZhZJbGsSG34sn4T8Nu9LuFFBF)
 [![asciicast](https://asciinema.org/a/ZhZJbGsSG34sn4T8Nu9LuFFBF.png)](https://asciinema.org/a/ZhZJbGsSG34sn4T8Nu9LuFFBF)
 
 The game asks if a random number is prime or not
