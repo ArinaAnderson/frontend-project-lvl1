@@ -9,8 +9,8 @@ const numberMinVal = 0;
 const getCorrectResult = (input) => (input % 2 === 0 ? 'yes' : 'no');
 const getOption = () => getRandomNumber(numberMinVal, numberMaxVal);
 
-const isEven = () => {
+const playBrainEven = () => {
   setGame(QUESTION_TITLE, getOption, getCorrectResult);
 };
 
-export default isEven;
+export default playBrainEven;

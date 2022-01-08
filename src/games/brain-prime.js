@@ -18,8 +18,8 @@ const getCorrectResult = (input) => {
   return 'yes';
 };
 
-const isPrime = () => {
+const playBrainPrime = () => {
   setGame(QUESTION_TITLE, getOption, getCorrectResult);
 };
 
-export default isPrime;
+export default playBrainPrime;

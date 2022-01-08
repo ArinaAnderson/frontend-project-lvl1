@@ -31,8 +31,8 @@ const getOption = () => {
 
 const getCorrectResult = () => correctRespond;
 
-const getProgression = () => {
+const playBrainProgression = () => {
   setGame(QUESTION_TITLE, getOption, getCorrectResult);
 };
 
-export default getProgression;
+export default playBrainProgression;

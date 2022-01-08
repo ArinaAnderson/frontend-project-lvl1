@@ -34,8 +34,8 @@ const getCorrectResult = () => {
   return getDividor(x, y);
 };
 
-const gcd = () => {
+const playBrainGcd = () => {
   setGame(QUESTION_TITLE, getOption, getCorrectResult);
 };
 
-export default gcd;
+export default playBrainGcd;

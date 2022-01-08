@@ -46,8 +46,8 @@ const getOption = () => {
 
 const getCorrectResult = () => operatorFuncs[input.operator](operands[0], operands[1]);
 
-const calc = () => {
+const playBrainCalc = () => {
   setGame(QUESTION_TITLE, getOption, getCorrectResult);
 };
 
-export default calc;
+export default playBrainCalc;
