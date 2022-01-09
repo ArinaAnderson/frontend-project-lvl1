@@ -10,8 +10,8 @@ const formQuestion = (option) => `Question: ${option}`;
 
 const getRespond = () => {
   const respond = readlineSync.question('Your answer: ');
-  console.log(typeof respond);
-  return Number.isNaN(parseInt(respond, 10)) ? respond : parseInt(respond, 10);
+  return respond;
+  // Number.isNaN(parseInt(respond, 10)) ? respond : parseInt(respond, 10);
 };
 
 const setGame = (title, setGameParamsCallback) => {
@@ -25,7 +25,8 @@ const setGame = (title, setGameParamsCallback) => {
     console.log(question);
     const respond = getRespond();
 
-    const isCorrect = checkRespond(correctVal, respond);
+    const isCorrect = checkRespond(typeof correctVal === 'string' ? correctVal : correctVal.toString(10), respond);
+    console.log(typeof correctVal === 'string');
     if (isCorrect) {
       roundCount += 1;
       console.log('Correct!');
