@@ -18,36 +18,39 @@ const inputParams = {
     },
   },
   operators: ['add', 'subst', 'multiply'],
-};
-
-const input = {
-  operands: [],
-  operator: null,
-};
-
-const { operatorFuncs, operators } = inputParams;
-const { operands } = input;
-
-const getOption = () => {
-  const maxVal = operators.length - 1;
-  const minVal = 0;
-  input.operator = operators[getRandomNumber(minVal, maxVal)];
-  operands[0] = getRandomNumber(numberMinVal, numberMaxVal);
-  operands[1] = getRandomNumber(numberMinVal, numberMaxVal);
-
-  const operatorToSymbs = {
+  operatorToSymbs: {
     add: '+',
     subst: '-',
     multiply: '*',
-  };
-  const operatorSymb = operatorToSymbs[input.operator];
-  return `${operands[0]} ${operatorSymb} ${operands[1]}`;
+  },
 };
 
-const getCorrectResult = () => operatorFuncs[input.operator](operands[0], operands[1]);
+const { operatorFuncs, operators, operatorToSymbs } = inputParams;
+
+const setGameParams = () => {
+  const operands = [];
+  let operator = null;
+  const gameParams = {
+    option: null,
+    correctVal: null,
+  };
+  const generateOption = () => {
+    operator = operators[getRandomNumber(0, operators.length - 1)];
+    operands[0] = getRandomNumber(numberMinVal, numberMaxVal);
+    operands[1] = getRandomNumber(numberMinVal, numberMaxVal);
+    const operatorSymb = operatorToSymbs[operator];
+    return `${operands[0]} ${operatorSymb} ${operands[1]}`;
+  };
+  gameParams.option = generateOption();
+
+  const generateCorrectResult = () => operatorFuncs[operator](operands[0], operands[1]);
+  gameParams.correctVal = generateCorrectResult();
+
+  return gameParams;
+};
 
 const playBrainCalc = () => {
-  setGame(QUESTION_TITLE, getOption, getCorrectResult);
+  setGame(QUESTION_TITLE, setGameParams);
 };
 
 export default playBrainCalc;
