@@ -5,7 +5,6 @@ import { getRandomNumber } from '../utils.js';
 const QUESTION_TITLE = 'Find the greatest common divisor of given numbers.';
 const numberMaxVal = 100;
 const numberMinVal = 1;
-
 const setGameParams = () => {
   const input = [];
   const generateOption = () => {
@@ -13,7 +12,6 @@ const setGameParams = () => {
     input[1] = getRandomNumber(numberMinVal, numberMaxVal);
     return `${input[0]} ${input[1]}`;
   };
-
   const generateCorrectResult = () => {
     const x = input[0];
     const y = input[1];
@@ -40,9 +38,7 @@ const setGameParams = () => {
   };
   return gameParamsGenerators;
 };
-
 const playBrainGcd = () => {
   setGame(QUESTION_TITLE, setGameParams);
 };
-
 export default playBrainGcd;
