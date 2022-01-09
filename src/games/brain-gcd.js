@@ -8,16 +8,11 @@ const numberMinVal = 1;
 
 const setGameParams = () => {
   const input = [];
-  const gameParams = {
-    option: null,
-    correctVal: null,
-  };
   const generateOption = () => {
     input[0] = getRandomNumber(numberMinVal, numberMaxVal);
     input[1] = getRandomNumber(numberMinVal, numberMaxVal);
     return `${input[0]} ${input[1]}`;
   };
-  gameParams.option = generateOption();
 
   const generateCorrectResult = () => {
     const x = input[0];
@@ -39,8 +34,11 @@ const setGameParams = () => {
     };
     return getDividor(x, y);
   };
-  gameParams.correctVal = generateCorrectResult();
-  return gameParams;
+  const gameParamsGenerators = {
+    generateOption,
+    generateCorrectResult,
+  };
+  return gameParamsGenerators;
 };
 
 const playBrainGcd = () => {

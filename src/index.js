@@ -11,22 +11,21 @@ const formQuestion = (option) => `Question: ${option}`;
 const getRespond = () => {
   const respond = readlineSync.question('Your answer: ');
   return respond;
-  // Number.isNaN(parseInt(respond, 10)) ? respond : parseInt(respond, 10);
 };
 
 const setGame = (title, setGameParamsCallback) => {
+  console.log('LAST CHECK');
   let roundCount = 0;
   const gamer = greet();
   console.log(title);
   while (roundCount < roundTotalNum) {
-    const gameParams = setGameParams(setGameParamsCallback);
-    const { option, correctVal } = gameParams;
+    const gameGenerators = setGameParams(setGameParamsCallback);
+    const option = gameGenerators.generateOption();
+    const correctVal = gameGenerators.generateCorrectResult(option);
     const question = formQuestion(option);
     console.log(question);
     const respond = getRespond();
-
     const isCorrect = checkRespond(typeof correctVal === 'string' ? correctVal : correctVal.toString(10), respond);
-    console.log(typeof correctVal === 'string');
     if (isCorrect) {
       roundCount += 1;
       console.log('Correct!');

@@ -7,16 +7,13 @@ const numberMaxVal = 100;
 const numberMinVal = 0;
 
 const setGameParams = () => {
-  const gameParams = {
-    option: null,
-    correctVal: null,
-  };
-
   const generateOption = () => getRandomNumber(numberMinVal, numberMaxVal);
-  const generateCorrectResult = (option) => (option % 2 === 0 ? 'yes' : 'no');
-  gameParams.option = generateOption();
-  gameParams.correctVal = generateCorrectResult(gameParams.option);
-  return gameParams;
+  const generateCorrectResult = (output) => (output % 2 === 0 ? 'yes' : 'no');
+  const gameParamsGenerators = {
+    generateOption,
+    generateCorrectResult,
+  };
+  return gameParamsGenerators;
 };
 
 const playBrainEven = () => {

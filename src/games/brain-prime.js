@@ -5,13 +5,7 @@ import { getRandomNumber } from '../utils.js';
 const QUESTION_TITLE = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const setGameParams = () => {
-  const gameParams = {
-    option: null,
-    correctVal: null,
-  };
-
   const generateOption = () => getRandomNumber(1, 100);
-
   const generateCorrectResult = (input) => {
     if (input === 1) {
       return 'no';
@@ -23,10 +17,13 @@ const setGameParams = () => {
     }
     return 'yes';
   };
-  gameParams.option = generateOption();
-  gameParams.correctVal = generateCorrectResult(gameParams.option);
-  return gameParams;
+  const gameParamsGenerators = {
+    generateOption,
+    generateCorrectResult,
+  };
+  return gameParamsGenerators;
 };
+
 const playBrainPrime = () => {
   setGame(QUESTION_TITLE, setGameParams);
 };

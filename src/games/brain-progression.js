@@ -7,10 +7,6 @@ const sequenceLength = 10;
 
 const setGameParams = () => {
   let correctRespond = null;
-  const gameParams = {
-    option: null,
-    correctVal: null,
-  };
   const generateOption = () => {
     const dif = getRandomNumber(1, 9);
     const firstMember = getRandomNumber(1, 20);
@@ -36,10 +32,11 @@ const setGameParams = () => {
 
   const generateCorrectResult = () => correctRespond;
 
-  gameParams.option = generateOption();
-  gameParams.correctVal = generateCorrectResult();
-
-  return gameParams;
+  const gameParamsGenerators = {
+    generateOption,
+    generateCorrectResult,
+  };
+  return gameParamsGenerators;
 };
 
 const playBrainProgression = () => {
