@@ -33,7 +33,7 @@ The game asks if a random number is even or not.
 
 [brain-even demonstration](https://asciinema.org/a/dcqF2BuH1VxrtryT77eF6RvSX)
 [![asciicast](https://asciinema.org/a/dcqF2BuH1VxrtryT77eF6RvSX.png)](https://asciinema.org/a/dcqF2BuH1VxrtryT77eF6RvSX)
-<script id="asciicast-459708" src="https://asciinema.org/a/459708.js" async></script>
+
 ### Brain-calc game
 
 Run **brain-calc** command in your CMD Line:
