@@ -1,6 +1,6 @@
 import setGame from '../index.js';
 
-import { getRandomNumber } from '../utils.js';
+import getRandomNumber from '../utils.js';
 
 const QUESTION_TITLE = 'What number is missing in the progression?';
 const sequenceLength = 10;
