@@ -1,8 +1,6 @@
 import readlineSync from 'readline-sync';
 
-import greet from './greet.js';
-
-const roundTotalNum = 3;
+const roundsNum = 3;
 
 const setGameParams = (setGameParamsCallback) => setGameParamsCallback();
 const checkRespond = (correctVal, respond) => correctVal === respond;
@@ -14,11 +12,14 @@ const getRespond = () => {
 };
 
 const setGame = (title, setGameParamsCallback) => {
-  console.log('LAST CHECK');
-  let roundCount = 0;
-  const gamer = greet();
+  let roundsCount = 0;
+
+  console.log('Welcome to the Brain Games!');
+  const gamerName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${gamerName}`);
+
   console.log(title);
-  while (roundCount < roundTotalNum) {
+  while (roundsCount < roundsNum) {
     const gameGenerators = setGameParams(setGameParamsCallback);
     const option = gameGenerators.generateOption();
     const correctVal = gameGenerators.generateCorrectResult(option);
@@ -27,14 +28,14 @@ const setGame = (title, setGameParamsCallback) => {
     const respond = getRespond();
     const isCorrect = checkRespond(typeof correctVal === 'string' ? correctVal : correctVal.toString(10), respond);
     if (isCorrect) {
-      roundCount += 1;
+      roundsCount += 1;
       console.log('Correct!');
     } else {
-      console.log(`'${respond}' is wrong answer ;(. Correct answer was '${correctVal}'.\nLet's try again, ${gamer}!`);
+      console.log(`'${respond}' is wrong answer ;(. Correct answer was '${correctVal}'.\nLet's try again, ${gamerName}!`);
       return;
     }
   }
-  console.log(`Congratulations, ${gamer}!`);
+  console.log(`Congratulations, ${gamerName}!`);
 };
 
 export default setGame;
