@@ -6,7 +6,6 @@ const QUESTION_TITLE = 'What number is missing in the progression?';
 const sequenceLength = 10;
 
 const setGameParams = () => {
-  console.log('MARMU');
   let correctVal = null;
   const sequenceDif = getRandomNumber(1, 9);
   const firstMember = getRandomNumber(1, 20);
