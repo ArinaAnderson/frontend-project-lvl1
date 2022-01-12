@@ -29,21 +29,17 @@ const { operatorFuncs, operators, operatorToSymbs } = inputParams;
 
 const setGameParams = () => {
   const operands = [];
-  let operator = null;
+  const operator = operators[getRandomNumber(0, operators.length - 1)];
+  operands[0] = getRandomNumber(numberMinVal, numberMaxVal);
+  operands[1] = getRandomNumber(numberMinVal, numberMaxVal);
+  const operatorSymb = operatorToSymbs[operator];
+  const option = `${operands[0]} ${operatorSymb} ${operands[1]}`;
+  const correctVal = operatorFuncs[operator](operands[0], operands[1]);
 
-  const generateOption = () => {
-    operator = operators[getRandomNumber(0, operators.length - 1)];
-    operands[0] = getRandomNumber(numberMinVal, numberMaxVal);
-    operands[1] = getRandomNumber(numberMinVal, numberMaxVal);
-    const operatorSymb = operatorToSymbs[operator];
-    return `${operands[0]} ${operatorSymb} ${operands[1]}`;
+  return {
+    option,
+    correctVal,
   };
-  const generateCorrectResult = () => operatorFuncs[operator](operands[0], operands[1]);
-  const gameParamsGenerators = {
-    generateOption,
-    generateCorrectResult,
-  };
-  return gameParamsGenerators;
 };
 
 const playBrainCalc = () => {

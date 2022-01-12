@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 
 const roundsNum = 3;
 
-const setGameParams = (setGameParamsCallback) => setGameParamsCallback();
+// const setGameParams = (setGameParamsCallback) => setGameParamsCallback();
 const checkRespond = (correctVal, respond) => correctVal === respond;
 const formQuestion = (option) => `Question: ${option}`;
 
@@ -11,7 +11,7 @@ const getRespond = () => {
   return respond;
 };
 
-const setGame = (title, setGameParamsCallback) => {
+const setGame = (title, setGameParams) => {
   let roundsCount = 0;
 
   console.log('Welcome to the Brain Games!');
@@ -20,9 +20,7 @@ const setGame = (title, setGameParamsCallback) => {
 
   console.log(title);
   while (roundsCount < roundsNum) {
-    const gameGenerators = setGameParams(setGameParamsCallback);
-    const option = gameGenerators.generateOption();
-    const correctVal = gameGenerators.generateCorrectResult(option);
+    const { option, correctVal } = setGameParams(); // gameParams;
     const question = formQuestion(option);
     console.log(question);
     const respond = getRespond();
