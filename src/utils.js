@@ -1,3 +1,6 @@
-const getRandomNumber = (min, max) => Math.floor(Math.random() * (max + 1 - min)) + min;
+export const getRandomNumber = (min, max) => Math.floor(Math.random() * (max + 1 - min)) + min;
 
-export default getRandomNumber;
+export const generateGameParams = (option, correctVal) => ({
+  option,
+  correctVal: correctVal.toString(10),
+});

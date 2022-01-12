@@ -1,6 +1,6 @@
 import setGame from '../index.js';
 
-import getRandomNumber from '../utils.js';
+import { getRandomNumber, generateGameParams } from '../utils.js';
 
 const QUESTION_TITLE = 'What number is missing in the progression?';
 const sequenceLength = 10;
@@ -28,10 +28,8 @@ const setGameParams = () => {
   };
 
   const option = buildSequence(1, firstMember, `${firstMember}`);
-  return {
-    option,
-    correctVal: correctVal.toString(10),
-  };
+
+  return generateGameParams(option, correctVal);
 };
 
 const playBrainProgression = () => {

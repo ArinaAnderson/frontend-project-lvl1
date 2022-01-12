@@ -1,6 +1,6 @@
 import setGame from '../index.js';
 
-import getRandomNumber from '../utils.js';
+import { getRandomNumber, generateGameParams } from '../utils.js';
 
 const QUESTION_TITLE = 'What is the result of the expression?';
 const numberMaxVal = 100;
@@ -36,10 +36,7 @@ const setGameParams = () => {
   const option = `${operands[0]} ${operatorSymb} ${operands[1]}`;
   const correctVal = operatorFuncs[operator](operands[0], operands[1]);
 
-  return {
-    option,
-    correctVal: correctVal.toString(10),
-  };
+  return generateGameParams(option, correctVal);
 };
 
 const playBrainCalc = () => {

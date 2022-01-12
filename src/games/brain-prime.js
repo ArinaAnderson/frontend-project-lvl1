@@ -1,6 +1,6 @@
 import setGame from '../index.js';
 
-import getRandomNumber from '../utils.js';
+import { getRandomNumber, generateGameParams } from '../utils.js';
 
 const QUESTION_TITLE = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -20,10 +20,7 @@ const setGameParams = () => {
   const option = getRandomNumber(1, 100);
   const correctVal = isPrime(option) ? 'yes' : 'no';
 
-  return {
-    option,
-    correctVal: correctVal.toString(10),
-  };
+  return generateGameParams(option, correctVal);
 };
 
 const playBrainPrime = () => {
