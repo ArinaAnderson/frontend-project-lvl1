@@ -4,12 +4,6 @@ const roundsNum = 3;
 
 // const setGameParams = (setGameParamsCallback) => setGameParamsCallback();
 const checkRespond = (correctVal, respond) => correctVal === respond;
-const formQuestion = (option) => `Question: ${option}`;
-
-const getRespond = () => {
-  const respond = readlineSync.question('Your answer: ');
-  return respond;
-};
 
 const setGame = (title, setGameParams) => {
   let roundsCount = 0;
@@ -20,10 +14,9 @@ const setGame = (title, setGameParams) => {
 
   console.log(title);
   while (roundsCount < roundsNum) {
-    const { option, correctVal } = setGameParams(); // gameParams;
-    const question = formQuestion(option);
-    console.log(question);
-    const respond = getRespond();
+    const { option, correctVal } = setGameParams();
+    console.log(`Question: ${option}`);
+    const respond = readlineSync.question('Your answer: ');
     const isCorrect = checkRespond(typeof correctVal === 'string' ? correctVal : correctVal.toString(10), respond);
     if (isCorrect) {
       roundsCount += 1;
