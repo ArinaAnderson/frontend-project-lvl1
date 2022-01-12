@@ -30,15 +30,13 @@ const setGameParams = () => {
     getRandomNumber(numberMinVal, numberMaxVal),
     getRandomNumber(numberMinVal, numberMaxVal),
   ];
-  /*
-  inputs[0] = getRandomNumber(numberMinVal, numberMaxVal);
-  inputs[1] = getRandomNumber(numberMinVal, numberMaxVal);
-  */
+
   const option = `${inputs[0]} ${inputs[1]}`;
   const correctVal = calculateGCD(inputs[0], inputs[1]);
 
   return generateGameParams(option, correctVal);
 };
+
 const playBrainGcd = () => {
   setGame(QUESTION_TITLE, setGameParams);
 };
