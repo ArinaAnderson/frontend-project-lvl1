@@ -14,9 +14,8 @@ const setGame = (title, setGameParams) => {
     const { option, correctVal } = setGameParams();
     console.log(`Question: ${option}`);
     const respond = readlineSync.question('Your answer: ');
-    const isCorrect = checkRespond(typeof correctVal === 'string' ? correctVal : correctVal.toString(10), respond);
+    const isCorrect = checkRespond(correctVal, respond);
     if (isCorrect) {
-      // roundsCount += 1;
       console.log('Correct!');
     } else {
       console.log(`'${respond}' is wrong answer ;(. Correct answer was '${correctVal}'.\nLet's try again, ${gamerName}!`);

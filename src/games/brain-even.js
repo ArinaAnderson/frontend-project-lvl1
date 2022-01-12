@@ -12,7 +12,7 @@ const setGameParams = () => {
 
   return {
     option,
-    correctVal,
+    correctVal: correctVal.toString(10),
   };
 };
 

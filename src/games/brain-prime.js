@@ -17,13 +17,12 @@ const isPrime = (num) => {
 };
 
 const setGameParams = () => {
-  console.log('MARMUUU');
   const option = getRandomNumber(1, 100);
   const correctVal = isPrime(option) ? 'yes' : 'no';
 
   return {
     option,
-    correctVal,
+    correctVal: correctVal.toString(10),
   };
 };
 

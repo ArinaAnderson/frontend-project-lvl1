@@ -30,7 +30,7 @@ const setGameParams = () => {
   const option = buildSequence(1, firstMember, `${firstMember}`);
   return {
     option,
-    correctVal,
+    correctVal: correctVal.toString(10),
   };
 };
 
