@@ -5,36 +5,24 @@ import getRandomNumber from '../utils.js';
 const GAME_TASK = 'What is the result of the expression?';
 const numberMaxVal = 100;
 const numberMinVal = 0;
-const inputParams = {
-  operatorFuncs: {
-    add(arg1, arg2) {
-      return arg1 + arg2;
-    },
-    subst(arg1, arg2) {
-      return arg1 - arg2;
-    },
-    multiply(arg1, arg2) {
-      return arg1 * arg2;
-    },
-  },
-  operators: ['add', 'subst', 'multiply'],
-  operatorToSymbs: {
-    add: '+',
-    subst: '-',
-    multiply: '*',
-  },
-};
+const operators = ['+', '-', '*'];
 
-const { operatorFuncs, operators, operatorToSymbs } = inputParams;
+const calculateResult = (val1, val2, operator) => {
+  if (operator === '+') {
+    return val1 + val2;
+  }
+  if (operator === '-') {
+    return val1 - val2;
+  }
+  return val1 * val2;
+};
 
 const setGameParams = () => {
   const operator = operators[getRandomNumber(0, operators.length - 1)];
   const leftOperand = getRandomNumber(numberMinVal, numberMaxVal);
   const rightOperand = getRandomNumber(numberMinVal, numberMaxVal);
-  const operatorSymb = operatorToSymbs[operator];
-  const questionVal = `${leftOperand} ${operatorSymb} ${rightOperand}`;
-  const correctVal = operatorFuncs[operator](leftOperand, rightOperand);
-
+  const questionVal = `${leftOperand} ${operator} ${rightOperand}`;
+  const correctVal = calculateResult(leftOperand, rightOperand, operator);
   return { questionVal, correctVal: correctVal.toString() };
 };
 
