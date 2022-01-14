@@ -17,10 +17,10 @@ const isNumberPrime = (num) => {
 };
 
 const setGameParams = () => {
-  const questionVal = getRandomNumber(1, 100);
-  const correctVal = isNumberPrime(questionVal) ? 'yes' : 'no';
+  const randomNumber = getRandomNumber(1, 100);
+  const correctVal = isNumberPrime(randomNumber) ? 'yes' : 'no';
 
-  return { questionVal, correctVal };
+  return { questionVal: randomNumber, correctVal };
 };
 
 const playBrainPrime = () => {
