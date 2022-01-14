@@ -2,7 +2,7 @@ import setGame from '../index.js';
 
 import { getRandomNumber, generateGameParams } from '../utils.js';
 
-const QUESTION_TITLE = 'Answer "yes" if the number is even, otherwise answer "no".';
+const GAME_TASK = 'Answer "yes" if the number is even, otherwise answer "no".';
 const numberMaxVal = 100;
 const numberMinVal = 0;
 
@@ -14,7 +14,7 @@ const setGameParams = () => {
 };
 
 const playBrainEven = () => {
-  setGame(QUESTION_TITLE, setGameParams);
+  setGame(GAME_TASK, setGameParams);
 };
 
 export default playBrainEven;

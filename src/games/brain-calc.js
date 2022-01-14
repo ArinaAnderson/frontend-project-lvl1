@@ -2,7 +2,7 @@ import setGame from '../index.js';
 
 import { getRandomNumber, generateGameParams } from '../utils.js';
 
-const QUESTION_TITLE = 'What is the result of the expression?';
+const GAME_TASK = 'What is the result of the expression?';
 const numberMaxVal = 100;
 const numberMinVal = 0;
 const inputParams = {
@@ -40,7 +40,7 @@ const setGameParams = () => {
 };
 
 const playBrainCalc = () => {
-  setGame(QUESTION_TITLE, setGameParams);
+  setGame(GAME_TASK, setGameParams);
 };
 
 export default playBrainCalc;

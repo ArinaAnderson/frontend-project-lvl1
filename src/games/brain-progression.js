@@ -2,7 +2,7 @@ import setGame from '../index.js';
 
 import { getRandomNumber, generateGameParams } from '../utils.js';
 
-const QUESTION_TITLE = 'What number is missing in the progression?';
+const GAME_TASK = 'What number is missing in the progression?';
 const sequenceLength = 10;
 
 const setGameParams = () => {
@@ -33,7 +33,7 @@ const setGameParams = () => {
 };
 
 const playBrainProgression = () => {
-  setGame(QUESTION_TITLE, setGameParams);
+  setGame(GAME_TASK, setGameParams);
 };
 
 export default playBrainProgression;

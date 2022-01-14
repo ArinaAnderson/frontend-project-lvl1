@@ -2,7 +2,7 @@ import setGame from '../index.js';
 
 import { getRandomNumber, generateGameParams } from '../utils.js';
 
-const QUESTION_TITLE = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const GAME_TASK = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
   if (num === 1) {
@@ -24,7 +24,7 @@ const setGameParams = () => {
 };
 
 const playBrainPrime = () => {
-  setGame(QUESTION_TITLE, setGameParams);
+  setGame(GAME_TASK, setGameParams);
 };
 
 export default playBrainPrime;
