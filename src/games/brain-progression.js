@@ -27,9 +27,9 @@ const setGameParams = () => {
     return buildSequence(idx + 1, newElem, newSequenceStr);
   };
 
-  const option = buildSequence(1, firstMember, `${firstMember}`);
+  const questionVal = buildSequence(1, firstMember, `${firstMember}`);
 
-  return generateGameParams(option, correctVal);
+  return generateGameParams(questionVal, correctVal);
 };
 
 const playBrainProgression = () => {

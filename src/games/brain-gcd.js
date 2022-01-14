@@ -6,6 +6,9 @@ const GAME_TASK = 'Find the greatest common divisor of given numbers.';
 const numberMaxVal = 100;
 const numberMinVal = 1;
 
+// const defineMax = (val1, val2) => (val1 > val2 ? val1 : val2);
+// const defineMin = (val1, val2) => (val1 > val2 ? val2 : val1);
+
 const calculateGCD = (x, y) => {
   if (x === y) {
     return x;
@@ -26,15 +29,13 @@ const calculateGCD = (x, y) => {
 };
 
 const setGameParams = () => {
-  const inputs = [
-    getRandomNumber(numberMinVal, numberMaxVal),
-    getRandomNumber(numberMinVal, numberMaxVal),
-  ];
+  const leftOperand = getRandomNumber(numberMinVal, numberMaxVal);
+  const rightOperand = getRandomNumber(numberMinVal, numberMaxVal);
 
-  const option = `${inputs[0]} ${inputs[1]}`;
-  const correctVal = calculateGCD(inputs[0], inputs[1]);
+  const questionVal = `${leftOperand} ${rightOperand}`;
+  const correctVal = calculateGCD(leftOperand, rightOperand);
 
-  return generateGameParams(option, correctVal);
+  return generateGameParams(questionVal, correctVal);
 };
 
 const playBrainGcd = () => {
