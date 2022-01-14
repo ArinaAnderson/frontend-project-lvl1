@@ -14,9 +14,6 @@ const calculateGCD = (x, y) => {
     return x;
   }
   const iter = (val1, val2) => {
-    if (val1 === 1 || val2 === 1) {
-      return 1;
-    }
     const max = defineMax(val1, val2);
     const min = defineMin(val1, val2);
     if (max % min === 0) {
