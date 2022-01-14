@@ -1,6 +1,6 @@
 import setGame from '../index.js';
 
-import { getRandomNumber, generateGameParams } from '../utils.js';
+import getRandomNumber from '../utils.js';
 
 const GAME_TASK = 'Answer "yes" if the number is even, otherwise answer "no".';
 const numberMaxVal = 100;
@@ -12,7 +12,7 @@ const setGameParams = () => {
   const randomNumber = getRandomNumber(numberMinVal, numberMaxVal);
   const correctVal = isNumberEven(randomNumber) ? 'yes' : 'no';
 
-  return generateGameParams(randomNumber, correctVal);
+  return { questionVal: randomNumber, correctVal };
 };
 
 const playBrainEven = () => {

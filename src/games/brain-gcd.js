@@ -1,6 +1,6 @@
 import setGame from '../index.js';
 
-import { getRandomNumber, generateGameParams } from '../utils.js';
+import getRandomNumber from '../utils.js';
 
 const GAME_TASK = 'Find the greatest common divisor of given numbers.';
 const numberMaxVal = 100;
@@ -32,7 +32,7 @@ const setGameParams = () => {
   const questionVal = `${leftOperand} ${rightOperand}`;
   const correctVal = calculateGCD(leftOperand, rightOperand);
 
-  return generateGameParams(questionVal, correctVal);
+  return { questionVal, correctVal: correctVal.toString() };
 };
 
 const playBrainGcd = () => {
