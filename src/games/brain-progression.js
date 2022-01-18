@@ -16,7 +16,7 @@ const buildSequence = (idx, sequence, sequenceDif) => {
 };
 
 const buildSequenceString = (arr, hiddenMemberIdx) => {
-  const sequenceMembers = arr.slice(0);
+  const sequenceMembers = [...arr];
   sequenceMembers[hiddenMemberIdx] = '..';
   return sequenceMembers.join(' ');
 };
