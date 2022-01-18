@@ -8,13 +8,16 @@ const numberMinVal = 0;
 const operators = ['+', '-', '*'];
 
 const calculateResult = (val1, val2, operator) => {
-  if (operator === '+') {
-    return val1 + val2;
+  switch (operator) {
+    case '+':
+      return val1 + val2;
+    case '-':
+      return val1 - val2;
+    case '*':
+      return val1 * val2;
+    default:
+      throw new Error(`Unknown operator: '${operator}'!`);
   }
-  if (operator === '-') {
-    return val1 - val2;
-  }
-  return val1 * val2;
 };
 
 const setGameParams = () => {
